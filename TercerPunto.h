@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <unordered_set> // Incluimos la biblioteca para usar conjuntos desordenados
+
 
 // Enumeración que define las opciones de filtrado para los correos electrónicos
 enum class FilterOption {
@@ -36,7 +36,7 @@ public:
 
 private:
     std::vector<Email> emails;  // Almacena los correos electrónicos en la bandeja de entrada
-    std::unordered_set<size_t> starredIndices; // Conjunto para almacenar índices de correos marcados como destacados
+    
 };
 
 
@@ -75,6 +75,22 @@ Sencillez : Los vectores son una estructura de datos simple y ampliamente utiliz
 Buen rendimiento : En la mayoría de los casos, el rendimiento de los vectores es excelente debido a su uso de memoria contigua y a su eficiente gestión de caché.
 
 Requisitos del problema : En el contexto de un sistema de correo electrónico, los correos electrónicos no tienen una relación de orden específica ni requerimientos especiales de inserción / eliminación.Por lo tanto, un vector se adapta bien a esta situación.
+
+
+*/
+
+/*
+Paginas vistas para responder todo lo anterior o darse una idea 
+
+https://www.geeksforgeeks.org/vector-in-cpp-stl/
+
+https://cplusplus.com/reference/vector/vector/
+
+https://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm
+
+https://www.youtube.com/watch?v=PocJ5jXv8No Este video fue referencia no tiene mucho que ver con el tema 
+
+
 
 
 */
