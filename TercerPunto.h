@@ -43,11 +43,13 @@ private:
 
 /*
 1. ¿Qué complejidad tiene añadir un elemento al final de un vector(array de tamaño dinámico) en el caso promedio ?
+
 Agregar un elemento al final de un vector(array de tamaño dinámico) en el caso promedio tiene una complejidad de tiempo amortizado constante O(1).
 Esto significa que, en general, la operación de agregar un elemento al final del vector es muy eficiente y su tiempo de ejecución no depende del tamaño actual del vector.Sin embargo, 
 hay momentos en que el vector puede necesitar redimensionar su capacidad interna, lo que puede llevar a una complejidad de O(n), donde n es el tamaño actual del vector.
 
 2. ¿Cuál es el caso no promedio y cada cuánto sucedería ?
+
 El caso no promedio en cuanto a la complejidad de agregar un elemento al final de un vector es cuando el vector necesita redimensionar su capacidad interna.
 Esto sucede cuando el número de elementos agregados al vector alcanza su capacidad actual.En ese momento, el vector crea un nuevo bloque de memoria, 
 copia los elementos existentes y luego agrega el nuevo elemento.Esta operación de redimensionamiento tiene una complejidad de O(n), donde n es el tamaño actual del vector.
@@ -55,7 +57,25 @@ En la mayoría de las implementaciones, el vector suele duplicar su capacidad int
 cada vez que se alcanza una potencia de 2 en el número de elementos.
 */
 
+/*
+La elección de la estructura de datos en el punto 3, que consiste en utilizar un std::vector<Email> para almacenar los correos electrónicos en la clase Inbox, se basa en varias consideraciones :
+
+Dinamismo del tamaño : Un vector es una estructura de datos de tamaño dinámico, lo que significa que puede crecer y encogerse automáticamente según se agreguen o eliminen elementos.Esto es esencial en un sistema de correo electrónico donde la cantidad de correos electrónicos puede variar significativamente.
 
 
+Eficiencia en la inserción y eliminación : Los vectores ofrecen una inserción eficiente en su extremo posterior, lo cual es común en el flujo de trabajo de agregar correos electrónicos a la bandeja de entrada.Además, aunque la eliminación no es tan eficiente como la inserción debido al desplazamiento de elementos, sigue siendo aceptable para la mayoría de los casos de uso.
 
+
+Acceso aleatorio : Los vectores permiten un acceso eficiente a elementos individuales mediante índices.Dado que los correos electrónicos pueden ser accedidos por índice y necesitamos filtrarlos según diferentes condiciones, esta característica es importante.
+
+
+Sencillez : Los vectores son una estructura de datos simple y ampliamente utilizada en C++.Son fáciles de entender, implementar y utilizar en comparación con estructuras más complejas como listas enlazadas.
+
+
+Buen rendimiento : En la mayoría de los casos, el rendimiento de los vectores es excelente debido a su uso de memoria contigua y a su eficiente gestión de caché.
+
+Requisitos del problema : En el contexto de un sistema de correo electrónico, los correos electrónicos no tienen una relación de orden específica ni requerimientos especiales de inserción / eliminación.Por lo tanto, un vector se adapta bien a esta situación.
+
+
+*/
 
